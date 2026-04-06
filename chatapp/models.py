@@ -203,3 +203,4 @@ class ProfileDailyVisit(models.Model):
 
     def __str__(self):
         return f"{self.profile_id} — {self.visit_date} — {self.visits} visits"
+    

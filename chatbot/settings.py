@@ -12,6 +12,11 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 
+import os
+PINECONE_API_KEY = os.environ.get("PINECONE_API_KEY", "pcsk_2vH3K7_6SZwrPCe7boFNSp9DzZHxUpNxrVeWBgnxrqDBETfrQgahBW3op8VyhG9RN7w43h")
+PINECONE_INDEX_NAME = os.environ.get("PINECONE_INDEX_NAME", "ibh-businesses")
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -130,3 +135,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 import pymysql
 pymysql.install_as_MySQLdb()
+
+
